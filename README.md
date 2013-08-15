@@ -20,9 +20,9 @@ Example Phonegap project that can be imported to Eclipse and exported as a .apk 
    * run ````./adb devices````
    * check to see if Glass Serial Number is detected
 6. In Eclipse, right-click on the example project and hit 'run example'
+7. Make changes to JavaScript, HTML, and CSS in the ````<googleglass-phonegap-example>/example/assets/www```` directory
 
 ##References
 * [Phonegap Docs](http://docs.phonegap.com/en/2.6.0/guide_getting-started_index.md.html)
-
-
-
+* [Android Debug Bridge](http://developer.android.com/tools/help/adb.html) aka 'ADB'
+* [Glass GDK](https://developers.google.com/glass/gdk)

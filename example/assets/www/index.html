@@ -37,23 +37,24 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
-
-            var options = {frequency:1000}
+            
+            // Listen for 'touchpad' events, which get registered as keydown events with keyCode 9 and 13
             document.addEventListener('keydown',keyController);
+
             function keyController(e){
-                document.body.innerHTML = '<p>'+e.keyCode+'</p>';
+                // Show results in document body
+                document.body.innerHTML = e.keyCode;
             }
 
-            // device APIs are available
-            //
+            // Device APIs are available
             document.addEventListener('deviceready',onDeviceReady);
             function onDeviceReady() {
-                navigator.accelerometer.watchAcceleration(onSuccess, onError,options);
+                navigator.accelerometer.watchAcceleration(onSuccess, onError, {frequency:1000});
             }
 
             // onSuccess: Get a snapshot of the current acceleration
-            //
             function onSuccess(acceleration) {
+                // Show results in document body
                 document.body.innerHTML='Acceleration X: ' + acceleration.x + '\n' +
                 'Acceleration Y: ' + acceleration.y + '\n' +
                 'Acceleration Z: ' + acceleration.z + '\n' +
@@ -61,6 +62,7 @@
             }
 
             function onError() {
+                // Show results in document body
                 document.body.innerHTML = 'accelerometer error';
             }
 
