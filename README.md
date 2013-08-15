@@ -1,7 +1,7 @@
 googleglass-phonegap-example
 ============================
 
-Example Phonegap project that can be imported to Eclipse and exported as a .apk file for Google Glass
+Example Phonegap project that can be imported to Eclipse and exported as .apk file for Google Glass
 
 ##Prerequisites
 1. Make sure [Glass Debugging](https://developers.google.com/glass/gdk) is turned on
