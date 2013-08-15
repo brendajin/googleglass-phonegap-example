@@ -6,8 +6,8 @@ Example Phonegap project that can be imported to Eclipse and exported as a .apk 
 ##Prerequisites
 1. Make sure [Glass Debugging](https://developers.google.com/glass/gdk) is turned on
 2. Connect your Glass via **USB** to your computer
-3. In your Glass mobile app, turn on **screencast**
-4. [Install Phonegap] (https://dl.dropboxusercontent.com/u/348446/trainings/android.html)
+3. On your mobile device, turn on Glass **screencast**
+4. On your computer, [Install Phonegap] (https://dl.dropboxusercontent.com/u/348446/trainings/android.html)
 
 ##Directions
 1. Clone this ````<googleglass-phonegap-example>```` repository
