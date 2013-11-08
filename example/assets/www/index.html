@@ -26,13 +26,10 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+        
+        <div id="accel"></div>
+        <div id="compass"></div>
+        
         <script type="text/javascript" src="cordova-2.7.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
@@ -48,24 +45,30 @@
 
             // Device APIs are available
             document.addEventListener('deviceready',onDeviceReady);
+            
             function onDeviceReady() {
-                navigator.accelerometer.watchAcceleration(onSuccess, onError, {frequency:1000});
+                navigator.accelerometer.watchAcceleration(onAccelSuccess, onError, {frequency:1000});
+                navigator.compass.watchHeading(onCompassSuccess, onError, {frequency:1000});
             }
 
-            // onSuccess: Get a snapshot of the current acceleration
-            function onSuccess(acceleration) {
+            // onAccelSuccess: Get a snapshot of the current acceleration
+            function onAccelSuccess(acceleration) {
                 // Show results in document body
-                document.body.innerHTML='Acceleration X: ' + acceleration.x + '\n' +
+                document.getElementById('accel').innerHTML='Acceleration X: ' + acceleration.x + '\n' +
                 'Acceleration Y: ' + acceleration.y + '\n' +
                 'Acceleration Z: ' + acceleration.z + '\n' +
                 'Timestamp: '      + acceleration.timestamp + '\n';
             }
+            
+            function onCompassSuccess(heading){
+            	document.getElementById('compass').innerHTML='Compass Heading: '+heading.magneticHeading;
+            }
 
             function onError() {
                 // Show results in document body
-                document.body.innerHTML = 'accelerometer error';
+                document.body.innerHTML = 'error';
             }
-
+			
         </script>
     </body>
 </html>
