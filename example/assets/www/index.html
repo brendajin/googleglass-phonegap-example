@@ -33,6 +33,8 @@
         <script type="text/javascript" src="cordova-2.7.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
+        
+        	// Initialize the application
             app.initialize();
             
             // Listen for 'touchpad' events, which get registered as keydown events with keyCode 9 and 13
@@ -46,8 +48,11 @@
             // Device APIs are available
             document.addEventListener('deviceready',onDeviceReady);
             
+            // Callback function to execute when the device is ready
             function onDeviceReady() {
                 navigator.accelerometer.watchAcceleration(onAccelSuccess, onError, {frequency:1000});
+                
+                // Insert Compass function here
                 navigator.compass.watchHeading(onCompassSuccess, onError, {frequency:1000});
             }
 
@@ -60,12 +65,13 @@
                 'Timestamp: '      + acceleration.timestamp + '\n';
             }
             
+            // onCompassSuccess: Get the current compass heading and insert into the DOM
             function onCompassSuccess(heading){
             	document.getElementById('compass').innerHTML='Compass Heading: '+heading.magneticHeading;
             }
-
-            function onError() {
-                // Show results in document body
+			
+			// Show results in document body
+            function onError() {    
                 document.body.innerHTML = 'error';
             }
 			
