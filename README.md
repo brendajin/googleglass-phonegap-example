@@ -1,7 +1,7 @@
 googleglass-phonegap-example
 ============================
 
-Example Phonegap project that can be imported to Eclipse and exported as .apk file for Google Glass. The JavaScript includes touchpad events and accelerometer events via the Phonegap API.
+Example Phonegap project that can be imported to Eclipse and exported as .apk file for Google Glass. The JavaScript includes touchpad events and accelerometer events via the Phonegap API.  More detailed instructions can be found [here](http://www.polyglotprogramminginc.com/getting-started-with-phonegap-on-google-glass/)
 
 ##Prerequisites
 1. Make sure [Glass Debugging](https://developers.google.com/glass/gdk) is turned on
@@ -20,8 +20,8 @@ Example Phonegap project that can be imported to Eclipse and exported as .apk fi
 8. In the **Package Explorer** on the left-hand side, right-click on ````example````
 9. Select **Properties (Cmd + I)**
 10. Under **Android** select ````Glass Development Kit Sneak Peek```` as the **Project Build Target > Target Name**
-11. Make sure your Glass is connected over USB. You can now hit **Run Example** to see the results.
-4. Make changes to JavaScript, HTML, and CSS in the ````<googleglass-phonegap-example>/example/assets/www```` directory
+11. Make sure your Glass is connected over USB. You can now hit **Run Example** to see the results.  You can run the app by going to your menu from the "ok glass" prompt and selecting the "PhoneGap App"
+12. Make changes to JavaScript, HTML, and CSS in the ````<googleglass-phonegap-example>/example/assets/www```` directory
 
 ##Debugging
 1. Download and install [Android Debug Bridge](http://developer.android.com/tools/help/adb.html) (adb)
